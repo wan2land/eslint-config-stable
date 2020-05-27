@@ -125,6 +125,9 @@ module.exports = {
       selector: 'memberLike',
       format: ['camelCase'],
     }, {
+      selector: 'property',
+      format: ['camelCase', 'snake_case'],
+    }, {
       selector: 'typeLike',
       format: ['PascalCase'],
     }],

@@ -5,7 +5,11 @@ interface User {
 
 class UserFinder {
   findUser(userId: string): User {
-    return { id: userId }
+    return {
+      id: userId,
+      birthYear: '2020',
+      birth_month: '12',
+    }
   }
 }
 
