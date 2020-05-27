@@ -44,15 +44,13 @@ module.exports = {
     'brace-style': 'off',
     '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'camelcase': 'off',
-    '@typescript-eslint/camelcase': 'error',
-    '@typescript-eslint/class-name-casing': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': 'error',
     // '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'error',
+    // '@typescript-eslint/explicit-member-accessibility': 'off',
+    // '@typescript-eslint/explicit-module-boundary-types': 'off',
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': 'error',
-    '@typescript-eslint/generic-type-naming': 'error',
     'indent': 'off',
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1, flatTernaryExpressions: true }],
     // '@typescript-eslint/interface-name-prefix': 'off',
@@ -114,6 +112,22 @@ module.exports = {
         'method',
       ],
     }],
+    '@typescript-eslint/naming-convention': ['error', {
+      selector: 'variable',
+      format: ['camelCase', 'UPPER_CASE'],
+    }, {
+      selector: 'function',
+      format: ['camelCase'],
+    }, {
+      selector: 'parameter',
+      format: ['camelCase'],
+    }, {
+      selector: 'memberLike',
+      format: ['camelCase'],
+    }, {
+      selector: 'typeLike',
+      format: ['PascalCase'],
+    }],
     'no-array-constructor': 'off',
     '@typescript-eslint/no-array-constructor': 'error',
     'no-empty-function': 'off',
@@ -145,7 +159,6 @@ module.exports = {
     // '@typescript-eslint/no-unnecessary-type-arguments': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
 
-    '@typescript-eslint/no-untyped-public-signature': 'warn',
     // '@typescript-eslint/no-unused-expressions': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
