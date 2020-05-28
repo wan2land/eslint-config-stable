@@ -112,25 +112,32 @@ module.exports = {
         'method',
       ],
     }],
-    '@typescript-eslint/naming-convention': ['error', {
-      selector: 'variable',
-      format: ['camelCase', 'UPPER_CASE'],
-    }, {
-      selector: 'function',
-      format: ['camelCase'],
-    }, {
-      selector: 'parameter',
-      format: ['camelCase'],
-    }, {
-      selector: 'memberLike',
-      format: ['camelCase'],
-    }, {
-      selector: 'property',
-      format: ['camelCase', 'snake_case'],
-    }, {
-      selector: 'typeLike',
-      format: ['PascalCase'],
-    }],
+    '@typescript-eslint/naming-convention': ['error',
+      {
+        selector: 'variable',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
+      },
+      {
+        selector: 'function',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+      {
+        selector: 'parameter',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+      {
+        selector: 'method',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+    ],
     'no-array-constructor': 'off',
     '@typescript-eslint/no-array-constructor': 'error',
     'no-empty-function': 'off',
