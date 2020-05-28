@@ -3,8 +3,8 @@ const path = require('path')
 const { CLIEngine } = require('eslint')
 
 
-describe('eslint config rules', () => {
-  it('test javascript rules', () => {
+describe('eslint javascript rules', () => {
+  it('test sample', () => {
     const cli = new CLIEngine({
       useEslintrc: false,
       configFile: path.resolve(__dirname, 'javascript/.eslintrc.js'),
@@ -15,16 +15,20 @@ describe('eslint config rules', () => {
 
     expect(messages).toEqual([])
   })
+})
 
-  it('test typescript rules', () => {
-    const cli = new CLIEngine({
-      useEslintrc: false,
-      configFile: path.resolve(__dirname, 'typescript/.eslintrc.js'),
-    })
-
-    const result = cli.executeOnFiles(path.resolve(__dirname, 'typescript/sample.ts'))
-    const messages = [].concat(...result.results.map((result) => result.messages))
-
-    expect(messages).toEqual([])
+describe('eslint typescript rules', () => {
+  const cli = new CLIEngine({
+    useEslintrc: false,
+    configFile: path.resolve(__dirname, 'typescript/.eslintrc.js'),
   })
+
+  for (const file of ['sample1.ts', 'sample2.ts']) {
+    it(`test ${file}`, () => {
+      const result = cli.executeOnFiles(path.resolve(__dirname, 'typescript', file))
+      const messages = [].concat(...result.results.map((result) => result.messages))
+  
+      expect(messages).toEqual([])
+    })  
+  }
 })
