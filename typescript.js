@@ -120,7 +120,7 @@ module.exports = {
       },
       {
         selector: 'function',
-        format: ['camelCase'],
+        format: ['camelCase', 'PascalCase'],
         leadingUnderscore: 'allow',
       },
       {
