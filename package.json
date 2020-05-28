@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-stable",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "ESLint Stable Configs.",
   "keywords": [
     "eslint",
