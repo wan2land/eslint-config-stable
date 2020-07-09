@@ -337,11 +337,27 @@ module.exports = {
 
     // Style guide
     'import/first': 'error',
-    'import/exports-last': 'error',
+    // 'import/exports-last': 'off',
     'import/no-duplicates': 'error',
     'import/no-namespace': 'error',
     // 'import/extensions': 'off',
-    // 'import/order': 'off',
+    'import/order': ['warn', {
+      'groups': [
+        ['builtin', 'external'],
+        'internal',
+        ['parent', 'sibling', 'index'],
+      ],
+      'pathGroups': [
+        {
+          pattern: '~/**',
+          group: 'internal',
+        },
+      ],
+      'newlines-between': 'always',
+      'alphabetize': {
+        order: 'asc',
+      },
+    }],
     'import/newline-after-import': 'error',
     // 'import/prefer-default-export': 'off',
     // 'import/max-dependencies': 'off',
