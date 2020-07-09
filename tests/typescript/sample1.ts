@@ -1,10 +1,20 @@
+import fs from 'fs'
+import { getVersion } from 'jest'
+
+function getImports() {
+  return {
+    fs,
+    getVersion,
+  }
+}
 
 interface User {
   id: string
 }
 
 class UserFinder {
-  findUser(userId: string): User {
+  findUser(userId: string): User | null {
+    getImports()
     return this._request(userId)
   }
 
@@ -44,5 +54,9 @@ for (let i = 0; i < 20; i++) {
   if (i === 0) {
     continue
   }
-  messages.push(userFinder.findUser(`${i}`).id)
+  const user = userFinder.findUser(`${i}`)
+  if (!user) {
+    continue
+  }
+  messages.push(user.id)
 }

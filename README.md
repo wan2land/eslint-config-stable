@@ -12,6 +12,12 @@
 
 ESLint config based on [Javascript Popular Convention](http://sideeffect.kr/popularconvention#javascript).
 
+And Major ESLint plugins at once!
+
+- `eslint-plugin-import`
+- `eslint-plugin-unicorn`
+- `@typescript-eslint/eslint-plugin`
+
 ## Installaion
 
 ```bash
@@ -48,6 +54,27 @@ module.exports = {
     'stable/typescript',
   ],
   parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
+  },
+}
+```
+
+### Vue + Typescript
+
+`.eslintrc.js`
+
+```js
+module.exports = {
+  parser: 'vue-eslint-parser',
+  extends: [
+    'plugin:vue/essential',
+    'stable',
+    'stable/typescript',
+  ],
+  parserOptions: {
+    extraFileExtensions: ['.vue'],
+    parser: '@typescript-eslint/parser',
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
