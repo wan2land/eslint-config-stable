@@ -80,3 +80,69 @@ module.exports = {
   },
 }
 ```
+
+### Javascript + Typescript
+
+```js
+
+module.exports = {
+  overrides: [
+    {
+      files: [
+        '**/*.ts',
+      ],
+      extends: [
+        'stable',
+        'stable/typescript',
+      ],
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.json'],
+      },
+    },
+    {
+      files: [
+        '**/*.js',
+      ],
+      extends: [
+        'stable',
+      ],
+    },
+  ],
+}
+```
+
+### Vue + Javascript + Typescript
+
+```js
+module.exports = {
+  overrides: [
+    {
+      files: [
+        '**/*.ts',
+        '**/*.vue',
+      ],
+      parser: 'vue-eslint-parser',
+      extends: [
+        'plugin:vue/essential',
+        'stable',
+        'stable/typescript',
+      ],
+      parserOptions: {
+        extraFileExtensions: ['.vue'],
+        parser: '@typescript-eslint/parser',
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.json'],
+      },
+    },
+    {
+      files: [
+        '**/*.js',
+      ],
+      extends: [
+        'stable',
+      ],
+    },
+  ],
+}
+```
