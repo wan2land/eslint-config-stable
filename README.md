@@ -83,8 +83,9 @@ module.exports = {
 
 ### Javascript + Typescript
 
-```js
+`.eslintrc.js`
 
+```js
 module.exports = {
   overrides: [
     {
@@ -113,6 +114,8 @@ module.exports = {
 ```
 
 ### Vue + Javascript + Typescript
+
+`.eslintrc.js`
 
 ```js
 module.exports = {
