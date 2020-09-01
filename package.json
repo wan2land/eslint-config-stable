@@ -21,7 +21,7 @@
     "eslint-plugin-unicorn": "^21.0.0"
   },
   "devDependencies": {
-    "eslint": "7.8.0",
+    "eslint": "7.8.1",
     "jest": "26.4.2",
     "typescript": "3.9.7"
   },
