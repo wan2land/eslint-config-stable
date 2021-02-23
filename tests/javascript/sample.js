@@ -1,6 +1,11 @@
+const { version: pkgVersion } = require('../package.json')
+
+function version() {
+  return pkgVersion
+}
 
 function say(message) {
-  return `say hello ${message}!`
+  return `say hello ${message}! v${version()}`
 }
 
 const messages = []
