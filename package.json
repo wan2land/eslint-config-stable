@@ -18,7 +18,7 @@
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-unicorn": "^36.0.0"
+    "eslint-plugin-unicorn": "^37.0.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",
