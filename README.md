@@ -20,6 +20,9 @@ And Major ESLint plugins at once!
 
 ## Installaion
 
+- `eslint <= 7` use eslint-config-stable@0.9
+- `eslint 8` use eslint-config-stable@0.10
+
 ```bash
 npm install eslint-config-stable -D
 ```
