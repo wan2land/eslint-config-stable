@@ -14,18 +14,23 @@
   "scripts": {
     "test": "jest tests"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "eslint/use-at-your-own-risk": "eslint/lib/unsupported-api.js"
+    }
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.0.0",
-    "@typescript-eslint/parser": "^4.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-unicorn": "^36.0.0"
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-unicorn": "^41.0.0"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
-    "jest": "27.2.2",
-    "typescript": "4.4.3"
+    "eslint": "^8.10.0",
+    "jest": "^27.5.1",
+    "typescript": "^4.6.2"
   },
   "peerDependencies": {
-    "eslint": "^6.8.0 || ^7.0.0"
+    "eslint": "^8.10.0"
   }
 }
