@@ -1,5 +1,8 @@
 # ESLint Config Stable
 
+> No more maintenance.  
+> use eslint default options :-)
+
 <p>
   <a href="https://github.com/wan2land/eslint-config-stable/actions?query=workflow%3A%22Node.js+CI%22"><img alt="Build" src="https://img.shields.io/github/workflow/status/wan2land/eslint-config-stable/Node.js%20CI?logo=github&style=flat-square" /></a>
   <a href="https://npmcharts.com/compare/eslint-config-stable?minimal=true"><img alt="Downloads" src="https://img.shields.io/npm/dt/eslint-config-stable.svg?style=flat-square" /></a>
